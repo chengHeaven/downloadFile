@@ -76,7 +76,7 @@ public class DownloadAdapter extends RecyclerView.Adapter<DownloadAdapter.ViewHo
             public void onClick(View view) {
                 if (holder.btn.getText().equals("CLICK")) {
                     holder.progress.setVisibility(View.VISIBLE);
-                    MainActivity.clickDownload(holder);
+                    MainActivity.clickDownload(holder, MainActivity.url, MainActivity.path);
                 } else if (holder.btn.getText().equals("delete")){
                     File file = new File(MainActivity.path);
                     if (file.exists()) {

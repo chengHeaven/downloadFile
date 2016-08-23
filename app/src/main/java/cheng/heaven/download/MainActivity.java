@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
     }
 
-    public static void clickDownload(final DownloadAdapter.ViewHolder holder) {
+    public static void clickDownload(final DownloadAdapter.ViewHolder holder, final String url, final String path) {
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder().url(url).build();
         client.newCall(request).enqueue(new Callback() {
